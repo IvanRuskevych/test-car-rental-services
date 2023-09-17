@@ -1,0 +1,16 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.title {
+	font-size: 14px;
+	font-weight: var(--fw-medium);
+}
+
+.accs {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
