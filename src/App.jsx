@@ -1,9 +1,11 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
-import './App.css';
+
+import Layout from './components/Layout/Layout';
 import HomePage from './pages/HomePage';
 import CatalogPage from './pages/CatalogPage';
 import FavoritesPage from './pages/FavoritesPage';
-import Layout from './components/Layout/Layout';
+
+import './App.css';
 
 function App() {
   return (
