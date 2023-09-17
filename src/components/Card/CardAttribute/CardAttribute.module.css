@@ -1,0 +1,10 @@
+.attribute {
+	display: inline-block;
+
+	padding: 0 4px;
+
+	font-size: 12px;
+
+	color: var(--gray-cards);
+	border-right: 1px solid var(--input-border);
+}
