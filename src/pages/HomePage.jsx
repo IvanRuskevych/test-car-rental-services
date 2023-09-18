@@ -1,7 +1,16 @@
-export default function HomePage() {
+import { Suspense } from 'react';
+import { Outlet } from 'react-router-dom';
+import Home from '../components/Home/Home';
+
+const HomePage = () => {
   return (
-    <div>
-      <h1>Home page</h1>
-    </div>
+    <>
+      <Home />
+      <Suspense fallback={null}>
+        <Outlet />
+      </Suspense>
+    </>
   );
-}
+};
+
+export default HomePage;
