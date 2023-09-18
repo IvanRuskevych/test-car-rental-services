@@ -9,6 +9,8 @@ import Button from '../Buttons/Button';
 
 function Card({ car }) {
   const address = addressShorten(car);
+  console.log('Card--address:', address);
+
   return (
     <article className={styles.cardContainer}>
       <figure>

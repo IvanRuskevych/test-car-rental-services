@@ -12,6 +12,7 @@ function CarItem({ car, favouriteChange, openModal }) {
   const [favourite, setFavourite] = useState(car.favourite);
 
   const address = addressShorten(car);
+  console.log('CarItem--address', address);
   const shortestFunctionality = shortestInArr(car.functionalities);
 
   const handleFavourite = () => {

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './CardAttribute.module.css';
 
 function CardAttribute({ label, text }) {
+  // console.log('CardAttribute: ', label, text);
   return (
     <>
       {label && (
