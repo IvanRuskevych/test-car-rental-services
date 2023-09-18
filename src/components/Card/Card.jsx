@@ -13,18 +13,16 @@ function Card({ car }) {
 
   return (
     <article className={styles.cardContainer}>
-      <figure>
-        <div className={styles.imageThumb}>
-          <img
-            className={styles.image}
-            src={car.img}
-            alt={`${car.make} ${car.model} ${car.year} car photo`}
-          />
-        </div>
-        <figcaption className={styles.title}>
-          {car.make} <span className={styles.accent}>{car.model}</span>, {car.year}
-        </figcaption>
-      </figure>
+      <div className={styles.imageThumb}>
+        <img
+          className={styles.image}
+          src={car.img}
+          alt={`${car.make} ${car.model} ${car.year} car photo`}
+        />
+      </div>
+      <figcaption className={styles.title}>
+        {car.make} <span className={styles.accent}>{car.model}</span>, {car.year}
+      </figcaption>
       <div className={styles.info}>
         <div className={styles.generalInfo}>
           {/* <div className={styles.title}>

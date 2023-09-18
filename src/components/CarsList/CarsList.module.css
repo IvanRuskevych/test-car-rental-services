@@ -1,12 +1,15 @@
 .container {
   display: flex;
 
-  row-gap: 30px;
-  column-gap: 30px;
   flex-wrap: wrap;
+  justify-content: space-between;
   margin: 20px auto;
+  gap: 30px;
+
+  /* flex-wrap: wrap; */
   width: 100%;
 }
+
 @media screen and (min-width: 480px) {
   .container {
     width: 480px;

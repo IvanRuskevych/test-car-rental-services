@@ -1,42 +1,42 @@
 .cardContainer {
-	width: 100%;
+  width: 100%;
 }
 
 .imageThumb {
-	margin-bottom: 16px;
-	max-height: 260px;
-	width: 100%;
+  margin-bottom: 16px;
+  max-height: 260px;
+  width: 100%;
 
-	border-radius: 14px;
-	text-align: center;
-	overflow: hidden;
+  border-radius: 14px;
+  text-align: center;
+  overflow: hidden;
 }
 
 .image {
-	width: 100%;
+  width: 100%;
 
-	object-fit: cover;
+  object-fit: cover;
 }
 
 .info {
-	display: flex;
-	flex-direction: column;
-	gap: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .generalInfo {
-	display: flex;
-	flex-direction: column;
-	gap: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
 .title {
-	margin-bottom: 8px;
-	font-size: 18px;
-	line-height: 20px;
-	font-weight: var(--fw-medium);
+  margin-bottom: 8px;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: var(--fw-medium);
 }
 
 .accent {
-	color: var(--btn-light);
+  color: var(--btn-light);
 }
