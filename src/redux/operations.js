@@ -12,9 +12,9 @@ export const getCars = createAsyncThunk('cars/getCars', async (page, { rejectWit
 
 export const getFavouriteCars = createAsyncThunk(
   'cars/getFavouriteCars',
-  async (_, { rejectWithValue }) => {
+  async (page, { rejectWithValue }) => {
     try {
-      const cars = await getFavouriteCarsAPI();
+      const cars = await getFavouriteCarsAPI(page);
       return cars;
     } catch (error) {
       return rejectWithValue(error.message);

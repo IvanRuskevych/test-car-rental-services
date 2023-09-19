@@ -1,22 +1,16 @@
 import PropTypes from 'prop-types';
+import css from './ButtonLoadMore.module.css';
 
-import styles from './ButtonLoadMore.module.css';
-
-function ButtonLoadMore({
-  // children,
-  //   text,
-  onClick,
-}) {
+export default function ButtonLoadMore({ onClick }) {
   return (
-    <button className={styles.button} type="button" onClick={onClick}>
-      {/* {children} */}
-    </button>
+    <div className={css.wrap}>
+      <button className={css.button} type="button" onClick={onClick}>
+        Load more
+      </button>
+    </div>
   );
 }
 
 ButtonLoadMore.propTypes = {
-  text: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  onClick: PropTypes.func,
+  onClick: PropTypes.func.isRequired,
 };
-
-export default ButtonLoadMore;

@@ -6,6 +6,8 @@ import Loader from '../components/Loader/Loader';
 import CarsList from '../components/CarsList/CarsList';
 import Modal from '../components/Modal/Modal';
 import Card from '../components/Card/Card';
+import ButtonLoadMore from '../components/Buttons/ButtonLoadMore';
+// import LoadMore from '../components/LoadMore/LoadMore';
 
 const CatalogPage = () => {
   const cars = useSelector(selectCars);
@@ -35,6 +37,11 @@ const CatalogPage = () => {
     }
   }, [dispatch, isFaveChange, page]);
 
+  const handleLoadMore = () => {
+    setPage((prevPage) => prevPage + 1);
+    // setStatus(Status.PENDING);
+  };
+
   const handleOpenModal = (car) => {
     setShowModal(true);
     setCar(car);
@@ -62,7 +69,9 @@ const CatalogPage = () => {
           <CarsList cars={cars} openModal={handleOpenModal} favouriteChange={setisFaveChange} />
         )}
 
-        {/* <LoadMore page={page} onClick={setPage} /> */}
+        {/* {<LoadMore page={page} onClick={setPage} />} */}
+
+        {<ButtonLoadMore onClick={handleLoadMore} />}
 
         {showModal && (
           <Modal shown={showModal} closeModal={handleCloseModal}>
