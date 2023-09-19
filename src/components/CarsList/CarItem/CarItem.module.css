@@ -41,6 +41,8 @@
   height: 18px;
 
   color: var(--white);
+
+  cursor: pointer;
 }
 
 .favourite {

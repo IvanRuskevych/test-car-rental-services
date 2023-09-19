@@ -1,16 +1,17 @@
 .buttonIcon {
-	position: absolute;
-	top: 18px;
-	right: 18px;
+  position: absolute;
+  top: 18px;
+  right: 18px;
 
-	width: 24px;
-	height: 24px;
+  width: 24px;
+  height: 24px;
 
-	transform: scale(1);
-	transition: color 300ms ease, transform 300ms ease;
+  transform: scale(1);
+  transition: color 300ms ease, transform 300ms ease;
+  cursor: pointer;
 }
 
 .buttonIcon:hover {
-	color: var(--btn-dark);
-	transform: scale(1.2);
+  color: var(--btn-dark);
+  transform: scale(1.2);
 }

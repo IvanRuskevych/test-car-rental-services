@@ -1,0 +1,23 @@
+.container {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url('/public/home-img.jpg');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+  height: 90vh;
+}
+
+.text {
+  color: #fff;
+  line-height: 1.6;
+  letter-spacing: 0.06em;
+
+  font-size: 40px;
+  font-weight: var(--fw-semi-bold);
+}

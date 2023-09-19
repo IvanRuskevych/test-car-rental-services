@@ -7,15 +7,6 @@ import CarsList from '../components/CarsList/CarsList';
 import Modal from '../components/Modal/Modal';
 import Card from '../components/Card/Card';
 
-// import Card from '../components/Card/Card';
-// import List from '../components/List/List';
-// import Loader from '../components/Loader/Loader';
-// import Modal from '../components/Modal/Modal';
-
-// import { getCars, setCatalogCarFavourite } from '../redux/operations';
-// import { selectCars, selectIsLoading } from '../redux/selectors';
-// import LoadMore from '../components/LoadMore/LoadMore';
-
 const CatalogPage = () => {
   const cars = useSelector(selectCars);
   const isLoading = useSelector(selectIsLoading);
@@ -61,6 +52,7 @@ const CatalogPage = () => {
   if (isLoading) {
     return <Loader />;
   }
+
   return (
     <>
       <div className="container">
