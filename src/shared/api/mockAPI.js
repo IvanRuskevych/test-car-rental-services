@@ -7,8 +7,8 @@ export const getCarsAPI = async (page) => {
   return await axios
     .get('cars', {
       params: {
-        page,
-        limit: 8,
+        page: 1,
+        limit: page * 8,
       },
     })
     .then(function (response) {
