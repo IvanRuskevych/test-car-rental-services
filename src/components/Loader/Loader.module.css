@@ -1,6 +1,11 @@
-.Loader {
-  height: 75vh;
+.loader {
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.circles {
+  color: var(--btn-light);
+  visibility: true;
 }

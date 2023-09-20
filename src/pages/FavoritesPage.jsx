@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectFavouriteCars, selectIsLoading } from '../redux/selectors';
 import { getFavouriteCars, setCarFavourite } from '../redux/operations';
+
 import Loader from '../components/Loader/Loader';
 import CarsList from '../components/CarsList/CarsList';
 import Modal from '../components/Modal/Modal';

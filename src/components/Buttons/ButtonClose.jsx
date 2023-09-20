@@ -4,11 +4,7 @@ import PropTypes from 'prop-types';
 import css from './ButtonClose.module.css';
 
 function ButtonClose({ onClose }) {
-  return (
-    <div>
-      <MdClose onClick={() => onClose()} className={css.buttonIcon} />
-    </div>
-  );
+  return <MdClose onClick={() => onClose()} className={css.buttonIcon} />;
 }
 
 ButtonClose.propTypes = {

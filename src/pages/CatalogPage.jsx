@@ -2,12 +2,12 @@ import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectCars, selectIsLoading } from '../redux/selectors';
 import { getCars, setCatalogCarFavourite } from '../redux/operations';
+
 import Loader from '../components/Loader/Loader';
 import CarsList from '../components/CarsList/CarsList';
 import Modal from '../components/Modal/Modal';
 import Card from '../components/Card/Card';
 import ButtonLoadMore from '../components/Buttons/ButtonLoadMore';
-// import LoadMore from '../components/LoadMore/LoadMore';
 
 const CatalogPage = () => {
   const cars = useSelector(selectCars);
@@ -39,7 +39,6 @@ const CatalogPage = () => {
 
   const handleLoadMore = () => {
     setPage((prevPage) => prevPage + 1);
-    // setStatus(Status.PENDING);
   };
 
   const handleOpenModal = (car) => {
@@ -61,21 +60,19 @@ const CatalogPage = () => {
   }
 
   return (
-    <>
-      <div className="container">
-        {cars && (
-          <CarsList cars={cars} openModal={handleOpenModal} favouriteChange={setisFaveChange} />
-        )}
+    <div className="container">
+      {cars && (
+        <CarsList cars={cars} openModal={handleOpenModal} favouriteChange={setisFaveChange} />
+      )}
 
-        {<ButtonLoadMore onClick={handleLoadMore} />}
+      {<ButtonLoadMore onClick={handleLoadMore} />}
 
-        {showModal && (
-          <Modal shown={showModal} closeModal={handleCloseModal}>
-            <Card car={car} onClose={handleCloseModal} />
-          </Modal>
-        )}
-      </div>
-    </>
+      {showModal && (
+        <Modal shown={showModal} closeModal={handleCloseModal}>
+          <Card car={car} onClose={handleCloseModal} />
+        </Modal>
+      )}
+    </div>
   );
 };
 

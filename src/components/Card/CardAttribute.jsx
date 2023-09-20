@@ -10,6 +10,7 @@ function CardAttribute({ label, text }) {
           {label} : {text}
         </li>
       )}
+
       {!label && <li className={css.attribute}> {text}</li>}
     </>
   );

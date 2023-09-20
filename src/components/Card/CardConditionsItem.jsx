@@ -6,11 +6,11 @@ function CardConditionsItem({ label, text }) {
   return (
     <li className={css.container}>
       {label && (
-        <div className={css.attribute}>
+        <p className={css.attribute}>
           {label} : <span className={css.accent}>{text}</span>
-        </div>
+        </p>
       )}
-      {!label && <div className={css.attribute}> {text}</div>}
+      {!label && <p className={css.attribute}> {text}</p>}
     </li>
   );
 }
