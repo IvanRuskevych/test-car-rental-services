@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 
-import css from './CarsList.module.css';
 import CarItem from './CarItem/CarItem';
+
+import css from './CarsList.module.css';
 
 function CarsList({ cars, favouriteChange, openModal }) {
   return (

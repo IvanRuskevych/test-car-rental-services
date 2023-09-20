@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 
+import CardAttribute from './CardAttribute';
+
 import css from './CardAccessories_Conditions.module.css';
-import CardAttribute from '../CardAttribute/CardAttribute';
 
 function CardAccessories({ accessories }) {
   return (
@@ -16,9 +17,9 @@ function CardAccessories({ accessories }) {
       )}
       {!accessories ||
         (accessories.length === 0 && (
-          <div className={css.accs}>
+          <ul className={css.accs}>
             <CardAttribute text="None" />
-          </div>
+          </ul>
         ))}
     </div>
   );

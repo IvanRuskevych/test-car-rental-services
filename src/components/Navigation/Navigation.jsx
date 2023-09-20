@@ -5,11 +5,10 @@ import css from './Navigation.module.css';
 export default function Navigation() {
   return (
     <>
-      <div>
-        <NavLink to="/" className={css.link}>
-          Car Rental Services
-        </NavLink>
-      </div>
+      <NavLink to="/" className={css.link}>
+        Car Rental Services
+      </NavLink>
+
       <nav>
         <NavLink to="/catalog" className={css.link}>
           Cataloge

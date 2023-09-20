@@ -31,19 +31,18 @@ const Modal = ({ children, closeModal, shown }) => {
   }, [closeModalByEscape]);
 
   return createPortal(
-    <>
-      <div className={css.backdrop} onClick={closeModalOnBackdrop}>
-        <div
-          id="modalContent"
-          className={
-            shown ? css.modalContainer : [css.modalContainer, css.modalEnterActive].join(' ')
-          }
-        >
-          <ButtonClose className={css.close} onClose={closeModal} />
-          {children}
-        </div>
+    <div className={css.backdrop} onClick={closeModalOnBackdrop}>
+      <div
+        id="modalContent"
+        className={
+          shown ? css.modalContainer : [css.modalContainer, css.modalEnterActive].join(' ')
+        }
+      >
+        <ButtonClose className={css.close} onClose={closeModal} />
+        {children}
       </div>
-    </>,
+    </div>,
+
     modalRoot
   );
 };

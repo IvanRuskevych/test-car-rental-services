@@ -1,11 +1,13 @@
 import PropTypes from 'prop-types';
 
-import css from './Card.module.css';
 import addressShorten from '../../utils/addressShorten';
-import CardAttribute from './CardAttribute/CardAttribute';
-import CardAccessories from './CardAccessories_Conditions/CardAccessories';
-import CardConditions from './CardAccessories_Conditions/CardConditions';
+
+import CardAttribute from './CardAttribute';
+import CardAccessories from './CardAccessories';
+import CardConditions from './CardConditions';
 import Button from '../Buttons/Button';
+
+import css from './Card.module.css';
 
 function Card({ car }) {
   const address = addressShorten(car);
@@ -23,25 +25,18 @@ function Card({ car }) {
         {car.make} <span className={css.accent}>{car.model}</span>, {car.year}
       </figcaption>
       <div className={css.info}>
-        <div className={css.generalInfo}>
-          {/* <div className={css.title}>
-						{car.make} <span className={css.accent}>{car.model}</span>,{" "}
-						{car.year}
-					</div> */}
-          <div className={css.attributes}>
-            <div className={css.attributesUpper}>
-              <CardAttribute text={address[0]} />
-              <CardAttribute text={address[1]} />
-              <CardAttribute label="Id" text={car.id} />
-              <CardAttribute label="Year" text={car.year} />
-              <CardAttribute label="Type" text={car.type} />
-            </div>
-            <div className={css.attributesLower}></div>
-            <CardAttribute label="Fuel Consumption" text={car.fuelConsumption} />
-            <CardAttribute label="Engine Size" text={car.engineSize} />
-          </div>
-          <div className={css.description}>{car.description}</div>
+        <div>
+          <ul>
+            <CardAttribute text={address[0]} />
+            <CardAttribute text={address[1]} />
+            <CardAttribute label="Id" text={car.id} />
+            <CardAttribute label="Year" text={car.year} />
+            <CardAttribute label="Type" text={car.type} />
+          </ul>
+          <CardAttribute label="Fuel Consumption" text={car.fuelConsumption} />
+          <CardAttribute label="Engine Size" text={car.engineSize} />
         </div>
+        <p>{car.description}</p>
         <CardAccessories accessories={car.accessories} />
         <CardConditions
           conditions={car.rentalConditions}
@@ -49,7 +44,7 @@ function Card({ car }) {
           price={car.rentalPrice}
         />
         <a href="tel:+380730000000">
-          <Button text="Rent a car" />
+          <Button text="Rental car" />
         </a>
       </div>
     </article>
@@ -68,10 +63,10 @@ Card.propTypes = {
     fuelConsumption: PropTypes.string,
     engineSize: PropTypes.string,
     accessories: PropTypes.arrayOf(PropTypes.string),
-    functionalities: PropTypes.arrayOf(PropTypes.string),
+    // functionalities: PropTypes.arrayOf(PropTypes.string),
     rentalPrice: PropTypes.string,
-    rentalCompany: PropTypes.string,
-    address: PropTypes.string,
+    // rentalCompany: PropTypes.string,
+    // address: PropTypes.string,
     rentalConditions: PropTypes.string,
     mileage: PropTypes.number,
   }),
