@@ -1,12 +1,12 @@
 import { MdClose } from 'react-icons/md';
 import PropTypes from 'prop-types';
 
-import styles from './ButtonClose.module.css';
+import css from './ButtonClose.module.css';
 
 function ButtonClose({ onClose }) {
   return (
     <div>
-      <MdClose onClick={() => onClose()} className={styles.buttonIcon} />
+      <MdClose onClick={() => onClose()} className={css.buttonIcon} />
     </div>
   );
 }

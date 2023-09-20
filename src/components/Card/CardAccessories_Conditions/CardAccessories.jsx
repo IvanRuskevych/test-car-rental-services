@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
 
-import styles from './CardAccessories_Conditions.module.css';
+import css from './CardAccessories_Conditions.module.css';
 import CardAttribute from '../CardAttribute/CardAttribute';
 
 function CardAccessories({ accessories }) {
   return (
-    <div className={styles.container}>
-      <p className={styles.title}>Accessories and functionalities:</p>
+    <div className={css.container}>
+      <p className={css.title}>Accessories and functionalities:</p>
       {accessories.length > 0 && (
-        <ul className={styles.accs}>
+        <ul className={css.accs}>
           {accessories.map((item, index) => (
             <CardAttribute key={index} text={item} />
           ))}
@@ -16,7 +16,7 @@ function CardAccessories({ accessories }) {
       )}
       {!accessories ||
         (accessories.length === 0 && (
-          <div className={styles.accs}>
+          <div className={css.accs}>
             <CardAttribute text="None" />
           </div>
         ))}

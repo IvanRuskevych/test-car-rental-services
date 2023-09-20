@@ -63,13 +63,9 @@ const CatalogPage = () => {
   return (
     <>
       <div className="container">
-        {/* <LoadMore page={page} onClick={setPage} /> */}
-
         {cars && (
           <CarsList cars={cars} openModal={handleOpenModal} favouriteChange={setisFaveChange} />
         )}
-
-        {/* {<LoadMore page={page} onClick={setPage} />} */}
 
         {<ButtonLoadMore onClick={handleLoadMore} />}
 

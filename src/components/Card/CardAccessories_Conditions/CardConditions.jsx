@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-import styles from './CardAccessories_Conditions.module.css';
+import css from './CardAccessories_Conditions.module.css';
 import stringToArray from '../../../utils/stringToArrray';
 import CardConditionsItem from './CardConditionsItem';
 
@@ -8,10 +8,10 @@ function CardConditions({ conditions, mileage, price }) {
   const conditionsArray = conditions.split('\n');
 
   return (
-    <div className={styles.container}>
-      <p className={styles.title}>Rental Conditions: </p>
+    <div className={css.container}>
+      <p className={css.title}>Rental Conditions: </p>
       {conditionsArray.length > 0 && (
-        <ul className={styles.accs}>
+        <ul className={css.accs}>
           {conditionsArray.map((item, index) => {
             const containsColumn = item.includes(':');
 
@@ -26,7 +26,7 @@ function CardConditions({ conditions, mileage, price }) {
         </ul>
       )}
 
-      <div className={styles.accs}>
+      <div className={css.accs}>
         <CardConditionsItem label="Mileage" text={mileage.toLocaleString()} />
         <CardConditionsItem label="Price" text={price.substring(1) + '$'} />
       </div>

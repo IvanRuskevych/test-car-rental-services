@@ -1,9 +1,7 @@
 import { useCallback, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 
-// import CloseButton from "../CloseButton/CloseButton";
-
-import styles from './Modal.module.css';
+import css from './Modal.module.css';
 import ButtonClose from '../Buttons/ButtonClose';
 
 const modalRoot = document.querySelector('#modal-root');
@@ -34,16 +32,14 @@ const Modal = ({ children, closeModal, shown }) => {
 
   return createPortal(
     <>
-      <div className={styles.backdrop} onClick={closeModalOnBackdrop}>
+      <div className={css.backdrop} onClick={closeModalOnBackdrop}>
         <div
           id="modalContent"
           className={
-            shown
-              ? styles.modalContainer
-              : [styles.modalContainer, styles.modalEnterActive].join(' ')
+            shown ? css.modalContainer : [css.modalContainer, css.modalEnterActive].join(' ')
           }
         >
-          <ButtonClose className={styles.close} onClose={closeModal} />
+          <ButtonClose className={css.close} onClose={closeModal} />
           {children}
         </div>
       </div>

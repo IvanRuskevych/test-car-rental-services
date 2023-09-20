@@ -42,7 +42,6 @@ export const carsSlice = createSlice({
         (state, { payload }) => {
           state.error = payload;
           state.isLoading = false;
-          console.log('Error', payload);
         }
       );
   },

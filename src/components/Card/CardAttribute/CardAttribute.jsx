@@ -1,17 +1,16 @@
 import PropTypes from 'prop-types';
 
-import styles from './CardAttribute.module.css';
+import css from './CardAttribute.module.css';
 
 function CardAttribute({ label, text }) {
-  // console.log('CardAttribute: ', label, text);
   return (
     <>
       {label && (
-        <li className={styles.attribute}>
+        <li className={css.attribute}>
           {label} : {text}
         </li>
       )}
-      {!label && <li className={styles.attribute}> {text}</li>}
+      {!label && <li className={css.attribute}> {text}</li>}
     </>
   );
 }

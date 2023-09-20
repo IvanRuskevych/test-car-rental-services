@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types';
 
-import styles from './CarsList.module.css';
+import css from './CarsList.module.css';
 import CarItem from './CarItem/CarItem';
 
 function CarsList({ cars, favouriteChange, openModal }) {
   return (
-    <ul className={styles.container}>
+    <ul className={css.container}>
       {cars.map((car) => (
         <CarItem car={car} key={car.id} openModal={openModal} favouriteChange={favouriteChange} />
       ))}

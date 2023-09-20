@@ -5,8 +5,6 @@ import HomePage from './pages/HomePage';
 import CatalogPage from './pages/CatalogPage';
 import FavoritesPage from './pages/FavoritesPage';
 
-import './App.css';
-
 function App() {
   return (
     <>
