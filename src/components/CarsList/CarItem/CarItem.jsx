@@ -2,7 +2,7 @@ import { useState } from 'react';
 import PropTypes from 'prop-types';
 import { MdOutlineFavoriteBorder, MdOutlineFavorite } from 'react-icons/md';
 
-import styles from './CarItem.module.css';
+import css from './CarItem.module.css';
 import addressShorten from '../../../utils/addressShorten';
 import shortestInArr from '../../../utils/shortestInArr';
 import CardAttribute from '../../Card/CardAttribute/CardAttribute';
@@ -12,7 +12,6 @@ function CarItem({ car, favouriteChange, openModal }) {
   const [favourite, setFavourite] = useState(car.favourite);
 
   const address = addressShorten(car);
-  console.log('CarItem--address', address);
   const shortestFunctionality = shortestInArr(car.functionalities);
 
   const handleFavourite = () => {
@@ -21,35 +20,35 @@ function CarItem({ car, favouriteChange, openModal }) {
   };
 
   return (
-    <li className={styles.container}>
+    <li className={css.container}>
       <div>
-        <div className={styles.imgContainer}>
+        <div className={css.imgContainer}>
           {!favourite && (
-            <MdOutlineFavoriteBorder onClick={() => handleFavourite()} className={styles.icon} />
+            <MdOutlineFavoriteBorder onClick={() => handleFavourite()} className={css.icon} />
           )}
 
           {favourite && (
             <MdOutlineFavorite
               onClick={() => handleFavourite()}
-              className={[styles.icon, styles.favourite].join(' ')}
+              className={[css.icon, css.favourite].join(' ')}
             />
           )}
 
           <img
-            className={styles.image}
+            className={css.image}
             src={car.img}
             alt={`${car.make} ${car.model} ${car.year} car photo`}
           />
         </div>
 
-        <div className={styles.titleContainer}>
+        <div className={css.titleContainer}>
           <p>
-            {car.make} <span className={styles.accent}>{car.model}</span>, {car.year}
+            {car.make} <span className={css.accent}>{car.model}</span>, {car.year}
           </p>
           <p>{car.rentalPrice}</p>
         </div>
 
-        <ul className={styles.attributesContainer}>
+        <ul className={css.attributesContainer}>
           <li>
             <CardAttribute text={address[0]} />
             <CardAttribute text={address[1]} />

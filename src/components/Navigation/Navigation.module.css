@@ -9,11 +9,11 @@
 }
 
 .link.active {
-  color: blue;
+  color: var(--btn-light);
 }
 
 .link:hover,
 .link:focus {
-  color: blue;
+  color: var(--btn-light);
   scale: 1.1;
 }

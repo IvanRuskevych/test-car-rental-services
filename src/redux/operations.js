@@ -30,8 +30,6 @@ export const setCatalogCarFavourite = createAsyncThunk(
       const cars = await getCarsAPI(page);
       return cars;
     } catch (error) {
-      console.log('setCarFavourite operations Error', error);
-
       return rejectWithValue(error.message);
     }
   }
@@ -45,8 +43,6 @@ export const setCarFavourite = createAsyncThunk(
       const carsFavourite = await getFavouriteCarsAPI();
       return carsFavourite;
     } catch (error) {
-      console.log('setCarFavourite operations Error', error);
-
       return rejectWithValue(error.message);
     }
   }
